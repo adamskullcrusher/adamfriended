@@ -82,7 +82,9 @@ body {
     padding: 10px;
     width: 100%;
     border-bottom: 1px solid #999;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -293,7 +295,7 @@ body {
     }
     .nav-links li {
         margin: 10px 0;
-        text-align: center; /* Center nav links in mobile menu */
+        text-align: center;
     }
     .hamburger {
         display: flex;
@@ -312,33 +314,36 @@ body {
         align-items: center;
     }
     .header-group {
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        text-align: center;
     }
     .header-avatar {
-        margin-bottom: 10px;
-        margin-right: 0;
+        margin-right: 0.5rem;
+    }
+    .header-avatar img {
+        width: 8vw;
+        height: 8vw;
+        min-width: 50px;
+        min-height: 50px;
+        max-width: 80px;
+        max-height: 80px;
     }
     .header-text h1 {
-        font-size: calc(1.4rem + 1.4vw);
+        font-size: calc(1.2rem + 1vw);
     }
     .header-text p {
-        font-size: calc(0.6rem + 0.5vw);
+        font-size: calc(0.5rem + 0.5vw);
+        margin-top: 0;
     }
     .header {
-        min-height: 125px;
+        min-height: 100px;
         padding: 5px;
-    }
-    .nav {
-        width: 100%;
     }
     .main-content {
         padding-bottom: 164.16px; /* Prevent fixed footer overlap */
     }
     .footer {
-        min-height: 164.16px;
+        min-height: 76.7px; /* Reduced by 87.5px from 164.16px */
         padding: 15px;
     }
     .content-wrapper {
