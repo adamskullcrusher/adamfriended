@@ -82,6 +82,10 @@ body {
     padding: 10px;
     width: 100%;
     border-bottom: 1px solid #999;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-links {
@@ -114,14 +118,17 @@ body {
 .hamburger {
     display: none;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 20px;
 }
 
 .hamburger img {
     width: 30px;
     height: 30px;
+}
+
+.hamburger span {
+    color: #000;
+    font-size: 1.4em;
+    margin-left: 8px;
 }
 
 /* Main content */
@@ -198,20 +205,16 @@ body {
         text-align: center; /* Center nav links in mobile menu */
     }
     .hamburger {
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        position: absolute !important;
-        top: 10px !important;
-        right: 20px !important;
-        z-index: 1000 !important;
-        padding: 10px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        z-index: 1000;
     }
     .hamburger img {
-        width: 30px !important;
-        height: 30px !important;
-        display: block !important;
-        opacity: 1 !important;
+        width: 30px;
+        height: 30px;
+        display: block;
     }
     .header-content {
         justify-content: center;
