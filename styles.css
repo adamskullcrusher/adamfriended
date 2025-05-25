@@ -380,13 +380,107 @@ body {
     .product-divider {
         margin: 2px 0;
     }
-    figure {
-        margin: 0;
-    }
     .section h1 {
         font-size: 2em;
     }
     .intro-text {
         font-size: 1em;
+    }
+}
+
+/* Styles specific to index.html */
+html, body {
+    width: 100%;
+}
+.header, .nav {
+    width: 100vw; /* Explicitly set to viewport width */
+    margin: 0; /* Ensure no margins interfere */
+}
+.full-width-image {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0; /* Remove border-radius to ensure edge-to-edge */
+}
+.promo-image {
+    width: 100%;
+    max-width: 640px; /* Limit the container to 640px */
+    margin: 0 auto; /* Center the container */
+    position: static; /* Override the inherited positioning */
+    left: auto; /* Reset positioning */
+    right: auto;
+    margin-left: auto; /* Ensure centering */
+    margin-right: auto;
+}
+.promo-image img {
+    width: 100%;
+    max-width: 640px; /* Ensure the image itself doesn't exceed 640px */
+    margin: 0 auto; /* Center the image within the container */
+    display: block; /* Ensure block-level centering */
+}
+.image-text-box {
+    width: 70vw; /* Span 70% of the browser window */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    text-align: center;
+    display: flex; /* Use Flexbox for two-column layout */
+    gap: 20px; /* Space between columns */
+}
+.text-box-left,
+.text-box-right {
+    flex: 1; /* Each column takes equal space */
+}
+.text-box-left p {
+    font-size: 1.5em; /* Larger text */
+    font-weight: bold; /* Bold text */
+    color: #333;
+    margin: 0;
+}
+.text-box-right p {
+    font-size: 1.1em; /* Same as before */
+    color: #333;
+    margin: 0;
+}
+.welcome-text-box {
+    width: 60vw; /* Span 60% of the browser window */
+    margin: 20px auto;
+    padding: 0; /* Remove padding */
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    text-align: center;
+}
+.welcome-text-box p {
+    font-size: 1.1em; /* Same as .text-box-right */
+    color: #333;
+    margin: 0 0 10px 0; /* Add spacing between paragraphs */
+}
+/* Media query for mobile: stack columns and adjust welcome-text-box */
+@media screen and (max-width: 768px) {
+    .image-text-box {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 10px; /* Smaller gap for mobile */
+    }
+    .text-box-left,
+    .text-box-right {
+        flex: none; /* Reset flex for stacking */
+        width: 100%; /* Full width when stacked */
+    }
+    .welcome-text-box {
+        width: 80vw; /* Span 80% of the browser window on mobile */
+        background-color: transparent; /* Already set, but ensures consistency */
+        border: none; /* Already set */
+        padding: 0; /* Already set */
     }
 }
