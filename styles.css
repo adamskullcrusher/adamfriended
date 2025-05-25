@@ -484,3 +484,9 @@ html, body {
         padding: 0; /* Already set */
     }
 }
+
+/* Prevent line breaks for links inside paragraphs in .section */
+.section p a {
+    display: inline;
+    margin-bottom: 0;
+}
